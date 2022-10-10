@@ -1,0 +1,72 @@
+Why do we need these?
+    To judge/compare efficiency of two or more algorithms
+
+Time Complexity
+    What?
+        The time complexity of an algorithm quantifies the amount of time taken by an algorithm to run as a function of the length of the input. This is not the actual time taken but a mere quantification based on size of input.
+
+    Why?
+        To judge/compare the efficiency in terms of time taken
+    
+    How?
+        It is assumed that a constant time c is taken to execute one operation, and then the total operations for an input length on N are calculated.
+        The lower order terms are ignored since the lower order terms are relatively insignificant for large input, therefore only the highest order term is taken (without constant).
+    
+    What is Order of Growth?
+        Order of growth is how the time of execution depends on the length of the input.(Eg: Linearly, Qudratically, logarithmically).
+
+Space Complexity
+    What?
+        The space complexity of an algorithm quantifies the amount of space taken by an algorithm to run as a function of the length of the input.
+
+    Why?
+        To judge/compare the efficiency in terms of space taken
+    
+    How?
+        It is assumed that a constant time c is taken to store one single variable, and then the total number of values we need for an input length N are calculated. The lower order terms are ignored since the lower order terms are relatively insignificant for large input, therefore only the highest order term is taken (without constant).
+
+    Auxilary Space Complexity
+        It is the Space Complexity of the algorithm without considering the apce complexity of the input.(Eg: Given an array printing the first element takes N space complexity and c Auxilary space comlexity)
+
+
+Asymptotic Notations
+
+    Big O
+        What
+            Big-O notation represents the upper bound of the running time of an algorithm. Thus, it gives the worst-case complexity of an algorithm.
+
+        Defn:
+            O(g(n)) = { f(n): there exist positive constants c and n0 such that 0 ≤ f(n) ≤ c*g(n) for all n ≥ n0 n:Integers}
+        
+        Eg:
+            f(n) is our time or space complexity, let's say n^2+2c
+            f(n) ≤ c*g(n)
+            n^2+2c ≤ c(g(n))
+            The value of g(n) to satisfy this is n^2, while c being any integer
+            It can be any value greater than n^2, i.e n^3,n^4 etc
+    Big Ω
+        What
+            Omega notation represents the lower bound of the running time of an algorithm. Thus, it provides the best case complexity of an algorithm.
+
+        Defn:
+            Ω(g(n)) = { f(n): there exist positive constants c and n0 such that 0 ≤ cg(n) ≤ f(n) for all n ≥ n0 }
+
+        Eg:
+            f(n) is our time or space complexity, let's say n^2+2c
+            f(n) ≥ c*g(n)
+            n^2+2c ≥ c(g(n))
+            The value of g(n) to satisfy this is n^2, while c being 1
+            It can be any value less than n^2, i.e n,log(n) etc
+    
+    Big Θ
+        what
+            Theta notation encloses the function from above and below. Since it represents the upper and the lower bound of the running time of an algorithm, it is used for analyzing the average-case complexity of an algorithm
+
+        Defn:
+            Θ(g(n)) = { f(n): there exist positive constants c1, c2 and n0 such that 0 ≤ c1g(n) ≤ f(n) ≤ c2g(n) for all n ≥ n0 }
+
+        Eg:
+            f(n) is our time or space complexity, let's say n^2+2c
+            0 ≤ c1g(n) ≤ f(n) ≤ c2g(n)
+            0 ≤ 1*n^2 ≤ n^2+2c ≤ 3*n^2
+            The value of g(n) to satisfy this is n^2, while c1 being 1, c2 being 3
